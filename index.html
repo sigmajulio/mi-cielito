@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Mi Cielito</title>
+  </head>
+  <body>
+    <header>
+      <svg class="deco" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.8 8.6 3 5 6.5 5c2 0 3.5 1.2 5.5 3.2C14 6.2 15.5 5 17.5 5 21 5 23.2 8.6 21.5 12 19 16.5 12 21 12 21z" /></svg>
+      <h1>Mi Cielito</h1>
+      <p>Dibuja tus propias constelaciones, ponles nombre y cuenta su historia</p>
+    </header>
+
+    <main>
+      <section class="caja">
+        <h2>Dibuja tu constelación</h2>
+        <p class="ayuda">Haz clic en el cielo para poner estrellas. Se unen en el orden en que las pones.</p>
+        <div class="cielo">
+          <canvas id="lienzo" width="600" height="400"></canvas>
+          <span id="contador">0 estrellas</span>
+        </div>
+        <button type="button" class="btn" id="deshacer">Quitar última estrella</button>
+
+        <form id="formulario">
+          <label>Nombre <input id="nombre" maxlength="40" placeholder="Ej. El Conejito Saltarín" /></label>
+          <label>Historia <textarea id="historia" maxlength="200" rows="3" placeholder="¿De qué trata tu constelación?"></textarea></label>
+          <div class="colores" id="colores"></div>
+          <p id="mensaje" class="mensaje"></p>
+          <button type="submit" class="btn principal" id="guardar">Guardar</button>
+          <button type="button" class="btn" id="cancelar" hidden>Cancelar</button>
+        </form>
+      </section>
+
+      <section class="caja">
+        <h2>Mis constelaciones</h2>
+        <input id="buscar" type="search" placeholder="Buscar por nombre..." />
+        <ul id="lista"></ul>
+      </section>
+    </main>
+
+    <footer>Hecho por Julio Ventura · POE Laboratorio #3</footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
