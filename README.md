@@ -4,7 +4,7 @@ Página para dibujar tus propias constelaciones. Haces clic en el cielo para pon
 
 Laboratorio #3 de Programación Orientada a Eventos - Julio Ventura
 
-Sitio: https://mi-cielito.vercel.app
+Sitio: https://mi-cielito-six.vercel.app
 
 ## Tecnologías
 
